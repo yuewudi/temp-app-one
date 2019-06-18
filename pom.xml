@@ -16,7 +16,22 @@
 		<!-- thymeleaf模板引擎 -->
 		<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
 	</properties>
-
+	
+	<!-- 平台依赖仓库配置 -->
+	<repositories>
+		<repository>
+			<id>aliyun</id>
+			<name>Aliyun</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	
 	<!-- Web项目所依赖的jar，类库 -->
 	<dependencies>
 		<!-- Servlet API -->
