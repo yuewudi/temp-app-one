@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn"  xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="~{html/head :: header}"></head>
+	<body>
+		<!-- Import Header Section -->
+		<nav th:replace="~{html/head :: headnav}"></nav>
+		<div class="container">
+			<div class="row">
+				<!-- Left Category Section-->
+				<div class="col-md-4 col-xl-3">
+					<!-- Personal Info -->
+					<div class="row">
+						<div class="col-md-12 mt-4 text-center">
+							<span><a href="#" title="RanJi"><img src="/uek/assets/image/ranji.jpg" alt="ranji"></a></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<blockquote class="blockquote text-center">
+							  <p class="mb-0">For i eq True, It will not Stop.</p>
+							  <footer class="blockquote-footer">RanJi</footer>
+							</blockquote>
+						</div>
+					</div>
+					<!-- Category Info -->
+					<div class="card ">
+						<h5 class="card-header"><i class="fa fa-bars" aria-hidden="true"></i> 分类</h5>
+						 <ul class="list-group">
+			                <a href="/u/waylau/blogs?category=11" class="list-group-item" title="waylau">
+			                    Spring Data<span class="badge badge-default badge-pill">11115</span>
+			                </a>
+			                <a href="/u/waylau/blogs?category=11" class="list-group-item" title="waylau">
+			                    	分布式系统<span class="badge badge-default badge-pill">338</span>
+			                </a>
+			                <a href="/u/waylau/blogs?category=11" class="list-group-item" title="waylau">
+			                   	Java<span class="badge badge-default badge-pill">289</span>
+			                </a>
+			                <a href="/u/waylau/blogs?category=11" class="list-group-item" title="waylau">
+			                   Eclipse<span class="badge badge-default badge-pill">189</span>
+			                </a>
+			
+			                <a href="/u/waylau/blogs?category=11" class="list-group-item" title="waylau">
+			                     Plugin<span class="badge badge-default badge-pill">189</span>
+			                </a>
+			            </ul>
+					</div>
+				</div>
+				<!-- Right Category Section-->
+				<div class="col-md-8 col-xl-9">
+					
+				</div>
+			</div><!-- row end -->
+		</div><!-- container end -->
+		<!-- Import Footer Section -->
+		<div th:replace="~{html/foot :: footer}"></div>
+	</body>
+</html>

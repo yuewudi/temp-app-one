@@ -4,9 +4,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * 第一个Controller
@@ -55,5 +55,10 @@ public class HelloController {
 	@RequestMapping("/index")
 	public String index(){
 		return "html/index";
+	}
+	
+	@RequestMapping("/u/{id}")		//-- 用户个人中心
+	public String personal(@PathVariable("id")int id){
+		return "html/personal";
 	}
 }
