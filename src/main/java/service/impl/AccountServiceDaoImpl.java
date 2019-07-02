@@ -14,7 +14,7 @@ public class AccountServiceDaoImpl implements IAccountService{
 	
 	@Override
 	public void openAccount(Account act) {
-		
+		actDao.saveOrUpdate(act);
 	}
 
 	@Override
