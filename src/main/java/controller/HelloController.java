@@ -38,14 +38,6 @@ public class HelloController {
 		return "{name:'zhangsan'}";
 	}
 	
-	/*
-	@RequestMapping("/index")
-	public ModelAndView index(){
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("jsp/index");
-		return mv;
-	}*/
-	
 	@GetMapping("/")
 	public String toIndex(){
 		return "redirect:/index";
@@ -60,5 +52,10 @@ public class HelloController {
 	@RequestMapping("/u/{id}")		//-- 用户个人中心
 	public String personal(@PathVariable("id")int id){
 		return "html/personal";
+	}
+	
+	@RequestMapping("/u/{username}/blog/{id}")
+	public String blog(@PathVariable("username")String username,@PathVariable("id")int id){
+		return "html/blog";
 	}
 }
