@@ -4,13 +4,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href=""  th:href="@{/assets/css/bootstrap.min.css}">
-		<title>web header</title>
+		<link rel="stylesheet" href=""  th:href="@{/assets/css/open-iconic-bootstrap.min.css}">
+		<title>Lemon Cloud</title>
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-md bg-warning navbar-dark" th:fragment="headnav">
 				<div class="container">
 					<!-- 1. Site Logo -->
-					<a class="navbar-brand" href="#">Lemon Cloud</a>
+					<a class="navbar-brand" href="#" th:href="@{/}">Lemon Cloud</a>
 					<!-- 2. Collapse Nav Button  -->
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 						<span class="navbar-toggler-icon"></span>
@@ -23,12 +24,14 @@
 							<li class="nav-item"><a class="nav-link" href="#">Hots</a></li>
 							<li class="nav-item" ><a class="nav-link" href="#">Other</a></li>
 							<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+							<li class="nav-item">
+								<!-- Search Form -->
+								<form class="form-inline">
+								  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+								  <button class="btn btn-info text-light" type="submit"><span class="oi oi-magnifying-glass" title="search" aria-hidden="true" ></span></button>
+								</form>
+							</li>
 						</ul>
-						<!-- Search Form -->
-						<form class="form-inline">
-						    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-						    <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
-						  </form>
 						<!-- Header Right Links   ml-auto居右显示-->
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
