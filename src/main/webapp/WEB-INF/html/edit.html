@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="~{html/head :: header}"></head>
+	<link rel="stylesheet"  th:href="@{/assets/plugin/editormd/css/editormd.min.css}" />
+	
+	<body>
+		<nav th:replace="~{html/head :: headnav}"></nav>
+		<div class="container">
+			<div class="row">
+				<!-- Main Content -->
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Create A Article</h5>
+							<div class="card-text">
+								<form>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text text-primary">Article Title</span>
+										</div>
+										<input type="text"  class="form-control" placeholder="Please enter article title">
+									</div>
+									<div id="summaryEditor">
+										<textarea name="summary"></textarea>
+									</div>
+									<div id="contentEditor">
+										<textarea name="content"></textarea>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					
+				</div><!-- Main Content end -->
+				<!-- Asside Section -->
+				<aside class="col-md-4">
+					
+				</aside><!-- Aside Section end -->
+			</div>
+			
+		</div>
+		<div th:replace="~{html/foot :: footer}"></div>
+		<script type="text/javascript" th:src="@{/assets/plugin/editormd/editormd.min.js}"></script>
+		<script type="text/javascript">
+			var summaryEditor, contentEditor;
+			$(function(){
+				summaryEditor = editormd("summaryEditor",{
+					width : "100%",
+					height: 200,
+					placeholder: 'please enter summary',
+					syncScrolling : "single",
+					path : "../assets/plugin/editormd/lib/",
+					watch : false,
+					toolbarIcons : function(){
+						return ["bold","del","italic","quote","ucwords","uppercase"];
+					} 
+				});
+				contentEditor = editormd("contentEditor",{
+					width : "100%",
+					height: 640,
+					placeholder:'aaaa',
+					syncScrolling : "single",
+					path    : "../assets/plugin/editormd/lib/",
+					watch:false,		//关闭实时预览
+					toolbarIcons : function(){
+						return editormd.toolbarModes['mini'];
+					} 
+				});
+			});
+		</script>
+	</body>
+</html>

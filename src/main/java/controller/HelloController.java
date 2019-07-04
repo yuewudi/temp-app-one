@@ -58,4 +58,13 @@ public class HelloController {
 	public String blog(@PathVariable("username")String username,@PathVariable("id")int id){
 		return "html/blog";
 	}
+	
+	@RequestMapping("/blog/edit")
+	public String editBlog(){
+		return "html/edit";
+	}
+	@RequestMapping("/tologin")
+	public String tologin(){
+		return "html/login";
+	}
 }

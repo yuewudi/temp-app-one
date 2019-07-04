@@ -3,6 +3,7 @@
 	<head th:fragment="header">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" href="#" th:href="@{/assets/image/favicon.ico}">
 		<link rel="stylesheet" href=""  th:href="@{/assets/css/bootstrap.min.css}">
 		<link rel="stylesheet" href=""  th:href="@{/assets/css/open-iconic-bootstrap.min.css}">
 		<title>Lemon Cloud</title>
@@ -34,7 +35,7 @@
 						</ul>
 						<!-- Header Right Links   ml-auto居右显示-->
 						<ul class="navbar-nav ml-auto">
-							<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+							<li class="nav-item"><a class="nav-link" href="#" th:href="@{/tologin}">Login</a></li>
 							<li class="nav-item"><a class="nav-link"  href="#">Register</a></li>
 						</ul>
 					</div>

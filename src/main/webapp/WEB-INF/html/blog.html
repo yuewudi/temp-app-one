@@ -66,11 +66,12 @@
 		                        <a href="/u/ranji/blogs/tag/WebSite"> <span class="badge badge-info">WebSite</span></a>
 		                    </p>
 						</div>
+						<hr>
 						<!-- Article enter Comment Section -->
 						<div class="card-text">
 							<p class="card-title">评论：</p>
 							<div class="form-group">
-								<textarea class="form-control" id="commentForm" rows="3"></textarea>
+								<textarea id="commentArea"></textarea>
 							</div>
 			                <button class="btn btn-info float-right">发表评论</button>
 						</div>
@@ -127,5 +128,16 @@
 	</div>
 	<!-- container end -->
 	<div th:replace="~{html/foot :: footer}"></div>
+	<!-- import  ckeditor -->
+	<script type="text/javascript" src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js" th:src="@{/assets/plugin/ckeditor/ckeditor.js}"></script>
+	<script type="text/javascript">
+		ClassicEditor
+		    .create( document.querySelector( '#commentArea' ) ,{
+		    	toolbar: ['heading','|','bold','italic','link','bulletedList', 'numberedList']
+		    })
+		    .catch( error => {
+		        console.error( error );
+		    } );
+	</script>
 </body>
 </html>
