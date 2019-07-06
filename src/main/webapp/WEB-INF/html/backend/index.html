@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cn"  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Lemon Cloud</title>
+		<link rel="shortcut icon" href="#" th:href="@{/assets/image/favicon.ico}">
+		<link rel="stylesheet" href="../layui/css/layui.css" th:href="@{/assets/backend/css/layui.css}">
+	</head>
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<div class="layui-header">
+			<div class="layui-logo">Lemon Cloud</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../layui/layui.js"  th:src="@{/assets/backend/layui.js}"></script>
+	<script type="text/javascript">
+		layui.use(['layer','form'],function(){
+			var layer = layui.layer, form = layui.form;
+			layer.msg('Hello World');
+		});
+	</script>
+</body>
+</html>

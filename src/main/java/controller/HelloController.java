@@ -67,4 +67,9 @@ public class HelloController {
 	public String tologin(){
 		return "html/login";
 	}
+	
+	@RequestMapping("/admin")
+	public String toAdmin(){
+		return "html/backend/index";
+	}
 }
