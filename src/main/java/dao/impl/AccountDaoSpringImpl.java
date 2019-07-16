@@ -4,15 +4,11 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
 import dao.prototype.IAccountDao;
 import entity.Account;
 import util.DateUtil;
@@ -21,10 +17,7 @@ import util.DateUtil;
 
 @Repository
 public class AccountDaoSpringImpl implements IAccountDao{
-	
-	@Autowired
-	private DataSource ds;
-	
+
 	@Autowired
 	private JdbcTemplate  jt;
 	

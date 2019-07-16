@@ -3,9 +3,10 @@ package controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * 第一个Controller
@@ -37,15 +38,38 @@ public class HelloController {
 		return "{name:'zhangsan'}";
 	}
 	
-	@RequestMapping("/index")
-	public ModelAndView index(){
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("jsp/index");
-		return mv;
+	@GetMapping("/")
+	public String toIndex(){
+		return "redirect:/index";
 	}
 	
-	@RequestMapping("/aaa")
-	public String aaa(){
-		return "html/test";
+	
+	@RequestMapping("/index")
+	public String index(){
+		return "html/index";
+	}
+	
+	@RequestMapping("/u/{id}")		//-- 用户个人中心
+	public String personal(@PathVariable("id")int id){
+		return "html/personal";
+	}
+	
+	@RequestMapping("/u/{username}/blog/{id}")
+	public String blog(@PathVariable("username")String username,@PathVariable("id")int id){
+		return "html/blog";
+	}
+	
+	@RequestMapping("/blog/edit")
+	public String editBlog(){
+		return "html/edit";
+	}
+	@RequestMapping("/tologin")
+	public String tologin(){
+		return "html/login";
+	}
+	
+	@RequestMapping("/admin")
+	public String toAdmin(){
+		return "html/backend/index";
 	}
 }
