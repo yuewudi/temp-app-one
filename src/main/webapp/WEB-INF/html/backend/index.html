@@ -2,21 +2,63 @@
 <html lang="zh-cn"  xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="utf-8">
-		 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>Lemon Cloud</title>
 		<link rel="shortcut icon" href="#" th:href="@{/assets/image/favicon.ico}">
 		<link rel="stylesheet" href="../layui/css/layui.css" th:href="@{/assets/backend/css/layui.css}">
 	</head>
 <body class="layui-layout-body">
 	<div class="layui-layout layui-layout-admin">
-		<div class="layui-header">
-			<div class="layui-logo">Lemon Cloud</div>
+		<!-- Header Navigation Section -->
+		<div class="layui-header layui-bg-cyan">
+			<div class="layui-logo" style="color:white">
+				Lemon Cloud
+			</div>
+			<ul class="layui-nav layui-layout-left">
+				<li class="layui-nav-item"><a href="#">控制台</a></li>
+				<li class="layui-nav-item"><a href="#">博文管理</a></li>
+				<li class="layui-nav-item"><a href="#">标签管理</a></li>
+			
+			</ul>
+			<ul class="layui-nav layui-layout-right">
+				<li class="layui-nav-item">
+					<a href="javascript:;">
+						<img src="" th:src="@{/assets/image/ranji.jpg}" class="layui-nav-img">
+						泥鳅也是鱼
+					</a>
+					<dl class="layui-nav-child">
+						<dd><a href="#">个人中心</a></dd>
+						<dd><a href="#">修改密码</a></dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item"><a href="#">退出</a></li>
+			</ul>
 		</div>
+		<!-- Header Navigation Section -->
+		<!-- Left Navigation Section -->
+		<div class="layui-side layui-bg-cyan">
+			<div class="layui-side-scroll">
+				<ul class="layui-nav layui-nav-tree">
+					<li class="layui-nav-item">
+						<a href="javascript:;">博文管理</a>
+						<dl class="layui-nav-child">
+							<dd><a href="#">列表一</a></dd>
+							<dd><a href="#">列表二</a></dd>
+							<dd><a href="#">列表三</a></dd>
+							<dd><a href="#">列表四</a></dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Left Navigation Section -->
 	</div>
 	<script type="text/javascript" src="../layui/layui.js"  th:src="@{/assets/backend/layui.js}"></script>
 	<script type="text/javascript">
-		layui.use(['layer','form'],function(){
-			var layer = layui.layer, form = layui.form;
+		layui.use(['layer','form','element'],function(){
+			var layer = layui.layer, 
+			form = layui.form,
+			element = layui.element;
 			layer.msg('Hello World');
 		});
 	</script>
